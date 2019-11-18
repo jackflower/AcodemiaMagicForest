@@ -1,3 +1,5 @@
+![acodemia_logo](https://github.com/jackflower/SCICode/blob/master/graphics/acodemia_logo.png)
+
 # AcodemiaMagicForest
 ### Acodemia - Magic Forest
  
