@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://mine_one/MineOne.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mine_two/MineTwo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://plants/Plants_C.tscn" type="PackedScene" id=3]
+[ext_resource path="res://plants/Plants_B.tscn" type="PackedScene" id=4]
+[ext_resource path="res://plants/Plants_A.tscn" type="PackedScene" id=5]
+[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=6]
+[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=7]
+
+[node name="main" type="Node2D" index="0"]
+
+[node name="MineOne" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 71.1689, 183 )
+animation_speed_min = 0.125
+animation_speed_max = 2.0
+explosion_damage_min = 10
+explosion_damage_max = 50
+
+[node name="MineTwo" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 551.388, 174.095 )
+animation_speed_min = 1
+animation_speed_max = 4
+explosion_damage_min = 10
+explosion_damage_max = 50
+
+[node name="Bush_1" parent="." index="2" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+position = Vector2( 30.5037, 32.4551 )
+rotation = 0.165148
+
+[node name="Plants_B" parent="Bush_1" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 88.9595, 60.4524 )
+
+[node name="Plants_A" parent="Bush_1" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 129.631, -49.7422 )
+
+[node name="Plants_B2" parent="Bush_1" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 119.054, 34.9572 )
+scale = Vector2( 1.9636, 1.83582 )
+
+[node name="Bush_2" parent="." index="3" instance=ExtResource( 3 )]
+
+editor/display_folded = true
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+position = Vector2( 738.568, 45.3933 )
+rotation = 0.155014
+scale = Vector2( 1.83001, 1.75076 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Plants_B" parent="Bush_2" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 91.9478, 78.3817 )
+
+[node name="Plants_A" parent="Bush_2" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 129.631, -49.7422 )
+
+[node name="Plants_B2" parent="Bush_2" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 119.054, 34.9572 )
+scale = Vector2( 1.9636, 1.83582 )
+
+[node name="Elixir_01" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 323.675, 57.7224 )
+health_regeneration = 1
+
+[node name="Elixir_02" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 207.8, 180.414 )
+health_regeneration = 1
+
+[node name="Elixir_03" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 457.728, 114.524 )
+health_regeneration = 1
+
+[node name="Shaggy" parent="." index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 323.698, 283.778 )
+
+
