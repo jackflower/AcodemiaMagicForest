@@ -6,17 +6,13 @@
 [ext_resource path="res://plants/Plants_B.tscn" type="PackedScene" id=4]
 [ext_resource path="res://plants/Plants_A.tscn" type="PackedScene" id=5]
 [ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=6]
-[ext_resource path="res://shaggy/Shaggy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=7]
 
 [node name="main" type="Node2D"]
 
 [node name="MineOne" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 71.1689, 183 )
-animation_speed_min = 0.125
-animation_speed_max = 2.0
-explosion_damage_min = 10
-explosion_damage_max = 50
 
 [node name="MineTwo" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -82,8 +78,8 @@ health_regeneration = 1
 position = Vector2( 457.728, 114.524 )
 health_regeneration = 1
 
-[node name="Shaggy" parent="." index="7" instance=ExtResource( 7 )]
+[node name="Wanderer" parent="." index="7" instance=ExtResource( 7 )]
 
-position = Vector2( 323.698, 283.778 )
+position = Vector2( 335.036, 330.371 )
 
 
