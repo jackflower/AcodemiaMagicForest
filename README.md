@@ -4,9 +4,16 @@
 ### Acodemia - Magic Forest
  
 Repozytorium zawiera szkielet gry przygodowej "Magiczny las".
-Bohaterem poruszasz się za pomocą strzałek.
+Bohaterem poruszasz się za pomocą strzałek:
 
-Twoim zadaniem jest zbierać eliksiry, które regenerują Twoje życie.
+* lewo - obrót w lewo
+* prawo - obrót w prawo
+* góra - ruch do przodu
+* dół - ruch do tyłu
+* Spacja - strzelamy strzałkami (shurikan)
+
+
+Na tym etapie projektu gry - Twoim zadaniem jest zbierać eliksiry, które regenerują Twoje życie.
 
 ![Eliksir](https://github.com/jackflower/AcodemiaMagicForest/blob/master/elixir/elixir_blue.png)
 
