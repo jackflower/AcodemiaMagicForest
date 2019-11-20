@@ -4,6 +4,9 @@
 ### Acodemia - Magic Forest
  
 Repozytorium zawiera szkielet gry przygodowej "Magiczny las".
+
+![Hero_icon](https://github.com/jackflower/AcodemiaMagicForest/blob/master/wanderer/wanderer_icon.png)
+
 Bohaterem poruszasz się za pomocą strzałek:
 
 * lewo - obrót w lewo
