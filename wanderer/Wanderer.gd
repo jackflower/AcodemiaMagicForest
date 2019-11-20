@@ -10,8 +10,6 @@ var rot_dir = 0
 var shooting = false
 var backwards = false
 
-#const MOTION_SPEED = 120 # Pixels/seconds
-#var health = 100
 var on_scene = false
 
 
@@ -21,6 +19,8 @@ export  (float) var created_bullet_scale_factor = 1
 export  (float) var created_bullet_speed = 400
 export  (float) var created_bullet_caliber = 2
 
+enum CONTROL { Simple_control, Advanced_control }
+export(CONTROL) var Control = CONTROL.Simple_control
 
 func _ready():
 	set_physics_process(true)
@@ -28,8 +28,30 @@ func _ready():
 	on_scene = true
 	pass
 	
+func get_simple_input():
 	
-func get_input():
+	velocity = Vector2()
+	
+	if Input.is_action_pressed("ui_right"):
+		rotation_degrees = 0
+		velocity = Vector2(speed, 0)
+	if Input.is_action_pressed("ui_left"):
+		rotation_degrees = -180
+		velocity = Vector2(-speed, 0)
+	if Input.is_action_pressed("ui_down"):
+		rotation_degrees = 90
+		velocity = Vector2(0, speed)
+	if Input.is_action_pressed("ui_up"):
+		rotation_degrees = -90
+		velocity = Vector2(0, -speed)
+	if Input.is_action_pressed("ui_select"):
+		if(shooting):
+			Shot()
+			shooting = false
+	pass
+	
+	
+func get_advance_input():
 	
 	rot_dir = 0
 	velocity = Vector2()
@@ -53,7 +75,11 @@ func get_input():
 		
 func _physics_process(delta):
 	
-	get_input()
+	if(Control == CONTROL.Simple_control):
+		get_simple_input()
+	else:
+		get_advance_input()
+	
 	rotation += rot_dir * rot_speed * delta
 	move_and_slide(velocity)
 		

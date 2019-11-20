@@ -81,5 +81,6 @@ health_regeneration = 1
 [node name="Wanderer" parent="." index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 335.036, 330.371 )
+Control = 1
 
 
