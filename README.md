@@ -7,7 +7,22 @@ Repozytorium zawiera szkielet gry przygodowej "Magiczny las".
 
 ![Hero_icon](https://github.com/jackflower/AcodemiaMagicForest/blob/master/wanderer/wanderer_icon.png)
 
-Bohaterem poruszasz się za pomocą strzałek:
+Bohaterem możesz poruszać się w wybrany przez Ciebie sposób.
+Po wskazaniu instancji sceny **Wanderer**,w Inspektorze obiektów, w zaznaczeniu **Control** wybieramy z listyrozwijalnej dostępne opcje:
+
+### Simple control
+
+Poruszanie za pomocą strzałek:
+
+* lewo - ruch w lewo
+* prawo - ruch w prawo
+* góra - ruch do przodu
+* dół - ruch do tyłu
+* Spacja - strzelamy strzałkami (shurikan)
+
+### Advanced control
+
+Poruszanie za pomocą strzałek:
 
 * lewo - obrót w lewo
 * prawo - obrót w prawo
