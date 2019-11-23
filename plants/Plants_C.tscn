@@ -2,7 +2,6 @@
 
 [ext_resource path="res://plants/plants_c.png" type="Texture" id=1]
 
-
 [node name="Plants_C" type="StaticBody2D"]
 
 input_pickable = false
