@@ -1,19 +1,48 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://mine_one/MineOne.tscn" type="PackedScene" id=1]
-[ext_resource path="res://mine_two/MineTwo.tscn" type="PackedScene" id=2]
-[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=3]
-[ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://plants/Plants_A.tscn" type="PackedScene" id=5]
-[ext_resource path="res://plants/Plants_C.tscn" type="PackedScene" id=6]
+[ext_resource path="res://plants/Plants_A.tscn" type="PackedScene" id=1]
+[ext_resource path="res://plants/Plants_B.tscn" type="PackedScene" id=2]
+[ext_resource path="res://plants/Plants_C.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mine_one/MineOne.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mine_two/MineTwo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://elixir/Elixir.tscn" type="PackedScene" id=6]
+[ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=7]
 
 [node name="main" type="Node2D" index="0"]
 
-[node name="MineOne" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Bush" type="Node2D" parent="." index="0"]
+
+position = Vector2( 769.289, 241.054 )
+rotation = -0.693743
+
+[node name="Plants_A" parent="Bush" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -24.4152, 10.5217 )
+
+[node name="Plants_B" parent="Bush" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 37.7037, -4.02036 )
+
+[node name="Plants_C1" parent="Bush" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 4.47647, -117.763 )
+
+[node name="Plants_C2" parent="Bush" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( -134.256, -33.2697 )
+rotation = 1.05644
+
+[node name="Plants_C" parent="Bush" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( -128.154, -165.959 )
+rotation = -2.20062
+scale = Vector2( 0.643403, 0.626362 )
+
+[node name="MineOne" parent="." index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 71.1689, 183 )
 
-[node name="MineTwo" parent="." index="1" instance=ExtResource( 2 )]
+[node name="MineTwo" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 112.878, 464.92 )
 animation_speed_min = 1
@@ -21,44 +50,24 @@ animation_speed_max = 4
 explosion_damage_min = 10
 explosion_damage_max = 50
 
-[node name="Elixir_01" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Elixir_01" parent="." index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 112.372, 75.899 )
 health_regeneration = 1
 
-[node name="Elixir_02" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Elixir_02" parent="." index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 135.094, 275.841 )
 health_regeneration = 1
 
-[node name="Elixir_03" parent="." index="4" instance=ExtResource( 3 )]
+[node name="Elixir_03" parent="." index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 194.167, 173.598 )
 health_regeneration = 1
 
-[node name="Wanderer" parent="." index="5" instance=ExtResource( 4 )]
+[node name="Wanderer" parent="." index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 335.036, 330.371 )
 Control = 1
-
-[node name="Plants_A" parent="." index="6" instance=ExtResource( 5 )]
-
-position = Vector2( 484.57, 234.341 )
-
-[node name="Plants_C" parent="." index="7" instance=ExtResource( 6 )]
-
-position = Vector2( 598.173, 300.231 )
-
-[node name="Plants_C2" parent="." index="8" instance=ExtResource( 6 )]
-
-position = Vector2( 614.078, 166.179 )
-
-[node name="Plants_C3" parent="." index="9" instance=ExtResource( 6 )]
-
-position = Vector2( 727.682, 257.061 )
-
-[node name="Plants_C4" parent="." index="10" instance=ExtResource( 6 )]
-
-position = Vector2( 839.013, 359.305 )
 
 
