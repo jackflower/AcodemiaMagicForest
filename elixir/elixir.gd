@@ -1,6 +1,6 @@
 extends Area2D
 
-# 2019-11-23 acodemia.pl
+# 2019-12-7 acodemia.pl
 
 var item
 export (float) var health_regeneration = 1
