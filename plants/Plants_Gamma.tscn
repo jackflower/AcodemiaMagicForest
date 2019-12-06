@@ -1,0 +1,125 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://plants/plants_b.png" type="Texture" id=1]
+
+[node name="Plants_Gamma" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -53.2498, -78.8847, -39.1657, -79.0332, -31.2434, -75.5122, -25.0817, -82.1141, 5.72722, -82.9944, 18.4909, -67.5899, 36.096, -67.5899, 45.7788, -58.3473, 52.8208, -42.0626, 58.9826, -38.1014, 63.824, -41.6225, 79.6685, -42.0626, 90.6717, -31.0594, 96.3934, -26.218, 106.956, -24.8976, 115.319, -19.6161, 125.882, -2.01104, 127.202, 9.87238, 113.998, 31.4386, 96.3934, 27.6598, 81.429, 53.6273, 75.7074, 56.7082, 64.7042, 51.4154, 49.7399, 53.1759, 35.6559, 59.7778, 14.0896, 73.433, 12.3291, 76.0737, -4.39571, 76.0737, -24.6415, 68.5916, -28.6027, 49.6661, -34.3243, 43.5044, -55.8906, 26.3394, -66.4536, 24.5789, -77.8969, 2.83035, -77.8969, -4.6518, -85.3791, -7.73269, -84.9389, -16.9754, -72.1752, -30.1792, -67.3339, -31.9397, -73.9358, -39.4218, -72.6154, -51.3053, -79.6574, -54.6777, -80.9778, -61.8683, -66.8937, -80.3536, -59.8517, -76.3925 )
+
+[node name="Sprite_back_1" type="Sprite" parent="." index="1"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( -8.12251, -52.345 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_2" type="Sprite" parent="." index="2"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 67.6875, -11.7325 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_3" type="Sprite" parent="." index="3"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 22.5625, -37.0025 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_4" type="Sprite" parent="." index="4"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 98.3725, 3.61001 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_5" type="Sprite" parent="." index="5"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( -13.5375, -13.5375 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_6" type="Sprite" parent="." index="6"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 62.2725, 27.075 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_7" type="Sprite" parent="." index="7"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( -51.4426, -49.6376 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_8" type="Sprite" parent="." index="8"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 23.465, -10.83 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_9" type="Sprite" parent="." index="9"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( -55.9551, -1.80503 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_back_10" type="Sprite" parent="." index="10"]
+
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( 18.9525, 37.0025 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite_1" type="Sprite" parent="." index="11"]
+
+texture = ExtResource( 1 )
+
+[node name="Sprite_2" type="Sprite" parent="." index="12"]
+
+position = Vector2( 36.1, 3.61001 )
+texture = ExtResource( 1 )
+
+[node name="Sprite_3" type="Sprite" parent="." index="13"]
+
+position = Vector2( 30.685, 28.88 )
+rotation = 2.80652
+texture = ExtResource( 1 )
+
+[node name="Sprite_4" type="Sprite" parent="." index="14"]
+
+position = Vector2( -23.1924, -26.1969 )
+rotation = 2.80652
+scale = Vector2( 1.12983, 0.712793 )
+texture = ExtResource( 1 )
+
+[node name="Sprite_5" type="Sprite" parent="." index="15"]
+
+position = Vector2( -29.7825, 11.7325 )
+rotation = 2.80652
+texture = ExtResource( 1 )
+
+[node name="Sprite_6" type="Sprite" parent="." index="16"]
+
+position = Vector2( 0.902481, 46.93 )
+rotation = 3.542
+texture = ExtResource( 1 )
+
+
