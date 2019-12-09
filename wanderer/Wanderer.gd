@@ -9,6 +9,7 @@ var velocity = Vector2()
 var rot_dir = 0
 var shooting = false
 var backwards = false
+var is_alive = true
 
 var on_scene = false
 
@@ -89,6 +90,7 @@ func _physics_process(delta):
 		
 	# obiekt ginie...
 	if(health <= 0):
+		is_alive = false
 		self.queue_free()
 		pass
 		
@@ -98,6 +100,7 @@ func _physics_process(delta):
 func update_health(damage):
 	health -= damage
 	print(health)
+	#get_parent().get_node("Camera2D").add_trauma(0.25)
 	pass
 	
 func update_item( item ):
@@ -130,6 +133,10 @@ func Shot():
 	shuriken.shuriken_speed = created_bullet_speed
 	shuriken.caliber = created_bullet_caliber
 	get_parent().add_child(shuriken)
+	
+	# shake...
+	#get_parent().get_node("Camera2D").add_trauma(0.5)
+	# shake...
 	pass
 	
 	

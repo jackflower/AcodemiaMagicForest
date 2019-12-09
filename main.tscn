@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://plants/Plants_Alfa.tscn" type="PackedScene" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://tower/Tower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://beastskeleton/BeastSkeleton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://beastskull/BeastSkull.tscn" type="PackedScene" id=10]
-[ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://camera/Camera.tscn" type="PackedScene" id=11]
+[ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=12]
 
 [node name="main" type="Node2D" index="0"]
 
@@ -148,11 +149,11 @@ explosion_damage_max = 90.0
 
 [node name="MineTwo_9" parent="." index="25" instance=ExtResource( 6 )]
 
-position = Vector2( 528.515, 1100.93 )
+position = Vector2( 173.543, 1377.86 )
 
 [node name="MineTwo_10" parent="." index="26" instance=ExtResource( 6 )]
 
-position = Vector2( 522.936, 1190.19 )
+position = Vector2( 495.243, 1341.24 )
 
 [node name="Elixir_01" parent="." index="27" instance=ExtResource( 7 )]
 
@@ -281,9 +282,14 @@ rotation = 0.305294
 scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Wanderer" parent="." index="52" instance=ExtResource( 11 )]
+[node name="Camera2D" parent="." index="52" instance=ExtResource( 11 )]
 
 position = Vector2( 360.211, 307.713 )
+target = NodePath("../Wanderer")
+
+[node name="Wanderer" parent="." index="53" instance=ExtResource( 12 )]
+
+position = Vector2( 355.176, 1387.73 )
 Control = 1
 
 

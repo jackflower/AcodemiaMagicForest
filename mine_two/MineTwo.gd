@@ -38,6 +38,7 @@ func createExplosion():
 func _on_Mine_body_entered( body ):
 	$AnimationPlayer.play("flap_animation")
 	$CollisionShape2D.disabled = true
+	get_parent().get_node("Camera2D").add_trauma(0.5)
 	pass
 	
 	
