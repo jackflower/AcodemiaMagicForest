@@ -9,7 +9,6 @@ var velocity = Vector2()
 var rot_dir = 0
 var shooting = false
 var backwards = false
-var is_alive = true
 
 var on_scene = false
 
@@ -90,7 +89,6 @@ func _physics_process(delta):
 		
 	# obiekt ginie...
 	if(health <= 0):
-		is_alive = false
 		self.queue_free()
 		pass
 		

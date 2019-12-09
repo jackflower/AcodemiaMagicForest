@@ -1,11 +1,11 @@
 extends Node2D
 
-# 2019-12-7 acodemia.pl
+# 2020-01-11 acodemia.pl
 
-# TO DO
-# Elixir - losowanie health vs poison
-# Tower - BulletTower - losowanie rodzaju pocisku
-# albo tekstura, albo scena...
+# To Do...
+# Utworzyć nową scenę - buteleczka...
+# może być lekarstwem albo trucizną...
+
 
 func _ready():
 	$Tower_01.setTarget($Wanderer)
@@ -19,6 +19,3 @@ func _ready():
 	$Tower_09.setTarget($Wanderer)
 	$Tower_10.setTarget($Wanderer)
 	pass
-
-#func _process(delta):
-#	pass
