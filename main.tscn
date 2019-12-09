@@ -282,7 +282,7 @@ rotation = 0.305294
 scale = Vector2( 3, 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Camera2D" parent="." index="52" instance=ExtResource( 11 )]
+[node name="Camera" parent="." index="52" instance=ExtResource( 11 )]
 
 position = Vector2( 360.211, 307.713 )
 target = NodePath("../Wanderer")
