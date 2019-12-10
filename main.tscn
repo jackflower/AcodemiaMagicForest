@@ -285,6 +285,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Camera" parent="." index="52" instance=ExtResource( 11 )]
 
 position = Vector2( 360.211, 307.713 )
+rotating = true
 target = NodePath("../Wanderer")
 
 [node name="Wanderer" parent="." index="53" instance=ExtResource( 12 )]

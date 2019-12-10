@@ -18,4 +18,7 @@ func _ready():
 	$Tower_08.setTarget($Wanderer)
 	$Tower_09.setTarget($Wanderer)
 	$Tower_10.setTarget($Wanderer)
+	
+	# reference solution
+	#$Camera.setTarget($Wanderer)
 	pass
