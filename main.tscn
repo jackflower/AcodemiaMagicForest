@@ -290,7 +290,7 @@ target = NodePath("../Wanderer")
 
 [node name="Wanderer" parent="." index="53" instance=ExtResource( 12 )]
 
-position = Vector2( 355.176, 1387.73 )
+position = Vector2( 375.316, 239.734 )
 Control = 1
 
 
