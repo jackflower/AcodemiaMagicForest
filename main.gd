@@ -2,11 +2,6 @@ extends Node2D
 
 # 2020-01-11 acodemia.pl
 
-# To Do...
-# Utworzyć nową scenę - buteleczka...
-# może być lekarstwem albo trucizną...
-
-
 func _ready():
 	$Tower_01.setTarget($Wanderer)
 	$Tower_02.setTarget($Wanderer)
