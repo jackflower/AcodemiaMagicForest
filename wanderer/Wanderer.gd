@@ -22,11 +22,13 @@ export  (float) var created_bullet_caliber = 2
 enum CONTROL { Simple_control, Advanced_control }
 export(CONTROL) var Control = CONTROL.Simple_control
 
+
 func _ready():
 	set_physics_process(true)
 	shooting = false
 	on_scene = true
 	pass
+	
 	
 func get_simple_input():
 	
@@ -71,8 +73,8 @@ func get_advance_input():
 			Shot()
 			shooting = false
 	pass
-		
-		
+	
+	
 func _physics_process(delta):
 	
 	if(Control == CONTROL.Simple_control):
@@ -93,23 +95,24 @@ func _physics_process(delta):
 		pass
 		
 	pass
-		
-		
+	
+	
 func update_health(damage):
 	health -= damage
 	print(health)
-	#get_parent().get_node("Camera2D").add_trauma(0.25)
 	pass
+	
 	
 func update_item( item ):
 	print (self.name + ": znalazłem " + item)
 	pass
 	
+	
 func regenerate_health( regeneration_value ):
 	health = health + regeneration_value
 	print(health)
 	pass
-		
+	
 	
 func Shot():
 	
@@ -131,10 +134,6 @@ func Shot():
 	shuriken.shuriken_speed = created_bullet_speed
 	shuriken.caliber = created_bullet_caliber
 	get_parent().add_child(shuriken)
-	
-	# shake...
-	#get_parent().get_node("Camera2D").add_trauma(0.5)
-	# shake...
 	pass
 	
 	

@@ -9,19 +9,19 @@ export var max_offset = Vector2(100, 75)
 # maksymalny obrót w radianach (używać oszczędnie).
 export var max_roll = 0.1
 # pzypisanie węzeła, za którym podąża ta kamera.
-export (NodePath) var target  # Assign the node this camera will follow.
-
-# rozwiązanie wykorzystujące referencję
-# wywołanie:
-# $Camera.setTarget($Wanderer)
+export (NodePath) var target
 
 var my_target
 var target_reference
 
 var trauma = 0.0  # aktualna siła wstrząsania
 var trauma_power = 2 # wykładnik potęgi obliczającej uraz (wstrząs) - użyj [2, 3]
-
 var follow_target = true
+
+
+# rozwiązanie wykorzystujące referencję
+# wywołanie:
+# $Camera.setTarget($Wanderer)
 
 
 func _ready():
