@@ -3,11 +3,11 @@ extends Camera2D
 # 2020-01-11 acodemia.pl
 
 # jak szybko ustają wstrząsy [0, 1].
-export var decay = 0.8
+export var decay = 0.08
 # maksymalna amplituda wstrząsówy poziomo/pionowo w pikselach.
 export var max_offset = Vector2(100, 75)
 # maksymalny obrót w radianach (używać oszczędnie).
-export var max_roll = 0.1
+export var max_roll = 20.1
 # pzypisanie węzeła, za którym podąża ta kamera.
 export (NodePath) var target
 
