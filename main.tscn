@@ -287,8 +287,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 position = Vector2( 360.211, 307.713 )
 rotating = true
-decay = 0.08
-max_roll = 20.1
 target = NodePath("../Wanderer")
 
 [node name="Wanderer" parent="." index="53" instance=ExtResource( 12 )]
