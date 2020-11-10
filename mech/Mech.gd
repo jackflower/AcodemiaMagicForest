@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 # 2019-01-19 acodemia.pl
 
@@ -7,8 +7,8 @@ export (int) var mech_speed = 100
 var target = Vector2()
 var velocity = Vector2()
 var direction = Vector2()
-var health = 100
-var shooting = false
+var health: float = 100
+var shooting: bool = false
 var bullet_data = preload("bullet/Bullet.tscn")
 var fireball_data = preload("bullet/Fireball.tscn")
 var current_bullet_data = bullet_data
@@ -41,13 +41,15 @@ func _input(event):
 		
 func _physics_process(delta):
 	
+	#velocity = (target - position).normalized() * mech_speed * delta # two
 	velocity = (target - position).normalized() * mech_speed
 	rotation = velocity.angle()
 
 	if (target - position).length() > 5:
-		move_and_slide(velocity)
-	else:
+		velocity = move_and_slide(velocity)
 		$mech_members/AnimationPlayer.play("animation_mech_walk")
+	else:
+		$mech_members/AnimationPlayer.stop()
 	pass
 	
 	

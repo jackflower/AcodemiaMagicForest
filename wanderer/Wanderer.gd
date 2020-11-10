@@ -83,11 +83,17 @@ func _physics_process(delta):
 		get_advance_input()
 	
 	rotation += rot_dir * rot_speed * delta
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
+	#move_and_slide(velocity) # popraawka kodu 2020-11-10
 		
+	# atrapa - opracować lepszą wizualizację...
 	if(not velocity):
+		$AnimationPlayer.stop()
+		pass
+	else:
 		$AnimationPlayer.play("wanderer_walk")
 		pass
+	pass
 		
 	# obiekt ginie...
 	if(health <= 0):
