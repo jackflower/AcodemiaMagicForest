@@ -23,11 +23,12 @@ func _physics_process(delta):
 		# check with what object the missile interferes
 		var entity = motion.collider
 		# the name of the object from which the bullet collided
-		var napis = "Bullet collides with: "
+		var napis = "Mech bullet collides with: "
 		print (napis + entity.get_name())
 		# health update of the hit object
 		if(entity.has_method("update_health")):
 			entity.update_health(int(caliber))
+			print("HAS update_health")
 			pass
 		explode()
 		queue_free()

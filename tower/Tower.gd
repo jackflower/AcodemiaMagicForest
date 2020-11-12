@@ -43,6 +43,8 @@ func _physics_process(delta):
 	if(health <= 0):
 		self.queue_free()
 		pass
+		
+		
 	if(my_target):
 		if (target_reference.get_ref()):
 			if(target_reference.get_ref().on_scene):

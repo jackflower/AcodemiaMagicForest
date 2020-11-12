@@ -37,7 +37,6 @@ func _physics_process(delta):
 	
 func explode():
 	var explosion = explosion_data.instance()
-	explosion_data
 	explosion.global_position = global_position
 	explosion.scale = scale
 	get_parent().add_child(explosion)
