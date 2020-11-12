@@ -1,24 +1,32 @@
-extends KinematicBody2D
+extends Node2D
 
-# 2019-12-7 acodemia.pl
+# Scinfor - jackflower
+# July 24, 2018
+#
+# The scene represents a missile dedicated
+# to a given type of defense tower
 
-var bullet_speed: float = 200
-var bullet_direction: Vector2 = Vector2(0, 0)
+
+var bullet_speed = 200 # Pixels/seconds
+var bullet_direction = Vector2(0, 0)
 var caliber = 1
-var explosion_data = preload("res://tower/explosion/Explosion.tscn")
+
 
 func _ready():
 	set_physics_process(true)
+	#set_process(true)
 	pass
-	
-	
+
+#func _process(delta):
+#	pass
+
 func _physics_process(delta):
 	
 	var motion = Vector2()
 	motion += Vector2(bullet_direction)
 	
 	motion = motion.normalized() * bullet_speed * delta
-	motion = move_and_collide(motion)
+	motion = $KinematicBody2D.move_and_collide(motion)
 	
 	if(motion):
 		# check with what object the missile interferes
@@ -36,15 +44,14 @@ func _physics_process(delta):
 	
 	
 func explode():
-	var explosion = explosion_data.instance()
-	explosion_data
-	explosion.global_position = global_position
-	explosion.scale = scale
+	var explosion = preload("../explosion/Explosion.tscn").instance()
+	explosion.global_position = $KinematicBody2D.global_position
+	explosion.global_scale = $KinematicBody2D.global_scale
+	explosion.get_node("AnimatedSprite").get_sprite_frames().set_animation_speed(explosion.get_node("AnimatedSprite").get_animation(), bullet_speed)
 	get_parent().add_child(explosion)
 	pass
-	
-	
+
+
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 	pass
-	
