@@ -15,9 +15,9 @@ func _ready():
 	$Tower_10.setTarget($Wanderer)
 	
 	$DefensiveTowerAlpha.setTarget($Mech)
-	$DefensiveTowerBeta.setTarget($Wanderer)
-	$DefensiveTowerGamma.setTarget($Wanderer)
-	$DefensiveTowerDelta.setTarget($Wanderer)
+	#$DefensiveTowerBeta.setTarget($Wanderer)
+	#$DefensiveTowerGamma.setTarget($Wanderer)
+	$DefensiveTowerDelta.setTarget($Mech)
 	
 	# reference solution
 	#$Camera.setTarget($Wanderer)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://plants/Plants_Alfa.tscn" type="PackedScene" id=2]
@@ -14,10 +14,7 @@
 [ext_resource path="res://wanderer/Wanderer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://mech/Mech.tscn" type="PackedScene" id=13]
 [ext_resource path="res://defensive_tower_alpha/DefensiveTowerAlpha.tscn" type="PackedScene" id=14]
-[ext_resource path="res://defensive_tower_beta/DefensiveTowerBeta.tscn" type="PackedScene" id=15]
-[ext_resource path="res://defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=16]
-[ext_resource path="res://defensive_tower_gamma/DefensiveTowerGamma.tscn" type="PackedScene" id=17]
-[ext_resource path="res://tower_alpha/TowerBaseAlpha.tscn" type="PackedScene" id=18]
+[ext_resource path="res://defensive_tower_delta/DefensiveTowerDelta.tscn" type="PackedScene" id=15]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 1 )
@@ -175,7 +172,7 @@ position = Vector2( -666.534, 363.019 )
 position = Vector2( -860.149, 475.639 )
 
 [node name="Tower_03" parent="." instance=ExtResource( 8 )]
-position = Vector2( 518.612, 493.437 )
+position = Vector2( 756.453, 493.437 )
 
 [node name="Tower_04" parent="." instance=ExtResource( 8 )]
 position = Vector2( 181.081, 649.65 )
@@ -226,23 +223,14 @@ rotating = true
 target = NodePath("../Mech")
 
 [node name="Wanderer" parent="." instance=ExtResource( 12 )]
-position = Vector2( 550.185, 176.14 )
+position = Vector2( 586.207, 184.616 )
 Control = 1
 
 [node name="Mech" parent="." instance=ExtResource( 13 )]
-position = Vector2( 229.665, 335.601 )
+position = Vector2( 216.951, 409.763 )
 
 [node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 14 )]
-position = Vector2( 63.2865, 128.178 )
+position = Vector2( 125.647, 127.607 )
 
-[node name="DefensiveTowerBeta" parent="." instance=ExtResource( 15 )]
-position = Vector2( 342.669, 64.6818 )
-
-[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 16 )]
-position = Vector2( 218.852, 67.8566 )
-
-[node name="DefensiveTowerGamma" parent="." instance=ExtResource( 17 )]
-position = Vector2( 247.425, 474.232 )
-
-[node name="TowerBaseAlpha" parent="." instance=ExtResource( 18 )]
-position = Vector2( 428.035, 302.228 )
+[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 15 )]
+position = Vector2( 309.994, 127.607 )

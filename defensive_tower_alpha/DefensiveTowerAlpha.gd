@@ -52,7 +52,6 @@ func _ready():
 	
 func _physics_process(delta):
 	
-	#if $Base/TowerBaseAlpha.working == false:
 	if not $Base/TowerBaseAlpha.health:
 		health = 0
 		
@@ -60,8 +59,8 @@ func _physics_process(delta):
 	if(health <= 0):
 		self.queue_free()
 		pass
-			
-			
+		
+		
 	if(my_target):
 		if (tower_process_enabled and target_reference.get_ref()):
 			if(target_reference.get_ref().on_scene):
@@ -115,15 +114,8 @@ func setTarget( target ):
 	target_reference = weakref(my_target)
 	tower_process_enabled = true
 	pass
-	
-	
-func update_health(damage):
-	health -= damage
-	print(health)
-	pass
-	
-	
+
+
 func _on_AnimationPlayerTowerAlpha_animation_finished( anim_name ):
 	can_shoot_animation = true
 	pass
-	
