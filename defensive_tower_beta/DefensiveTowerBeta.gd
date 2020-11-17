@@ -10,6 +10,7 @@ extends Node2D
 # that will be the target by calling
 # the  setTarget (Target)  function.
 
+var health = 100
 
 var can_shoot_animation = true
 var prev_shooting = false
@@ -50,6 +51,16 @@ func _ready():
 	
 	
 func _physics_process(delta):
+	
+	if not $Base/TowerBaseBeta.health:
+		health = 0
+		
+		
+	if(health <= 0):
+		self.queue_free()
+		pass
+		
+		
 	if(my_target):
 		if (tower_process_enabled and target_reference.get_ref()):
 			if(target_reference.get_ref().on_scene):
