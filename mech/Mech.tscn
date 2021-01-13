@@ -8,9 +8,7 @@
 [ext_resource path="res://mech/mech_graphics/mech_head_.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "animation_mech_walk"
-length = 1.0
 loop = true
 step = 0.01
 tracks/0/type = "value"
@@ -99,110 +97,63 @@ tracks/6/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=2]
-
-custom_solver_bias = 0.0
 radius = 29.0
 
-[node name="Mech" type="KinematicBody2D" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
+[node name="Mech" type="KinematicBody2D"]
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
-mech_speed = 100
-created_bullet_scale_factor = 1
 created_bullet_speed = 220.0
-bullet_caliber = 2
 
-[node name="mech_members" type="Node2D" parent="." index="0"]
-
+[node name="mech_members" type="Node2D" parent="."]
 rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="mech_foot_left" type="Sprite" parent="mech_members" index="0"]
-
+[node name="mech_foot_left" type="Sprite" parent="mech_members"]
 position = Vector2( -20, 0 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="mech_foot_right" type="Sprite" parent="mech_members" index="1"]
-
+[node name="mech_foot_right" type="Sprite" parent="mech_members"]
 position = Vector2( 20, 0 )
 texture = ExtResource( 2 )
 flip_h = true
-_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="mech_arm_left" type="Sprite" parent="mech_members" index="2"]
-
+[node name="mech_arm_left" type="Sprite" parent="mech_members"]
 position = Vector2( -18, -9 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="cannon_left" type="Position2D" parent="mech_members/mech_arm_left" index="0"]
-
+[node name="cannon_left" type="Position2D" parent="mech_members/mech_arm_left"]
 position = Vector2( 0, -30 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="mech_arm_right" type="Sprite" parent="mech_members" index="3"]
-
+[node name="mech_arm_right" type="Sprite" parent="mech_members"]
 position = Vector2( 18, -9 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="cannon_right" type="Position2D" parent="mech_members/mech_arm_right" index="0"]
-
+[node name="cannon_right" type="Position2D" parent="mech_members/mech_arm_right"]
 position = Vector2( 0, -30 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="mech_body" type="Sprite" parent="mech_members" index="4"]
-
+[node name="mech_body" type="Sprite" parent="mech_members"]
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="mech_armlet_left" type="Sprite" parent="mech_members" index="5"]
-
+[node name="mech_armlet_left" type="Sprite" parent="mech_members"]
 position = Vector2( -13, 9 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
-[node name="mech_armlet_right" type="Sprite" parent="mech_members" index="6"]
-
+[node name="mech_armlet_right" type="Sprite" parent="mech_members"]
 position = Vector2( 13, 9 )
 texture = ExtResource( 5 )
 flip_h = true
-_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="mech_head" type="Sprite" parent="mech_members" index="7"]
-
+[node name="mech_head" type="Sprite" parent="mech_members"]
 position = Vector2( 0, 9 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="mech_members" index="8"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mech_members"]
 playback_speed = 0.75
 anims/animation_mech_walk = SubResource( 1 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 2 )
 
-[node name="TimerShoot" type="Timer" parent="." index="2"]
-
-process_mode = 1
+[node name="TimerShoot" type="Timer" parent="."]
 wait_time = 0.5
-one_shot = false
 autostart = true
-
 [connection signal="timeout" from="TimerShoot" to="." method="_on_TimerShoot_timeout"]
-
-
