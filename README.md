@@ -2,7 +2,7 @@
 
 # AcodemiaMagicForest
 ### Acodemia - Magic Forest
-Godot Enginr v3.3.4.stable.official
+Godot Engine v3.3.4.stable.official
  
 Repozytorium zawiera szkielet gry przygodowej "Magiczny las".
 
