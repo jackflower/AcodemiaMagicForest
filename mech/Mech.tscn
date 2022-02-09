@@ -156,4 +156,5 @@ shape = SubResource( 2 )
 [node name="TimerShoot" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
 [connection signal="timeout" from="TimerShoot" to="." method="_on_TimerShoot_timeout"]

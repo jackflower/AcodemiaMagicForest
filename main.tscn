@@ -230,12 +230,15 @@ Control = 1
 
 [node name="Mech" parent="." instance=ExtResource( 13 )]
 position = Vector2( 216.951, 409.763 )
+rotation = -0.844703
 
 [node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 14 )]
-position = Vector2( 125.647, 127.607 )
+position = Vector2( 112.433, 125.719 )
+rotation = 2.18776
 
 [node name="DefensiveTowerDelta" parent="." instance=ExtResource( 15 )]
-position = Vector2( 309.994, 127.607 )
+position = Vector2( 425.147, 106.842 )
+rotation = -2.17853
 
 [node name="DefensiveTowerBeta" parent="." instance=ExtResource( 16 )]
 position = Vector2( 341.778, 612.841 )

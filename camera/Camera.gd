@@ -1,5 +1,30 @@
 extends Camera2D
 
+# january 21, 2022
+# Camera usage:
+# 
+# 1. Editor:
+# z poziomu węzła rodzica (main), w którym jest
+# węzeł Camera - child - wybrać dla kamery obiekt,
+# który będzie śledziła kamera
+#
+# 2. Script:
+# wskazać obiekt, który będzie śledziła kamera
+# [ np. $Camera.setTarget($Wanderer) ]
+# [ np. $Camera.setTarget($Mech) ] 
+#
+# 3. Scene (node):
+# dodać do sceny obiektu, którym ma być śledzony
+# węzeł (scenę) Camera
+#
+# Description:
+# W obrębie sceny (węzła) może być wiele kamer, jakkolwiek
+# zawsze jedna z nich jest kamerą (current), która renderuje
+# swój widok (widok w oku kamery) na to, co w danej chwili
+# widzi Player - rendering na ekran urządzenia, które
+# wyśwwitla daną klatkę renderingu gry...
+
+
 # 2020-01-11 acodemia.pl
 
 # jak szybko ustają wstrząsy [0, 1].
@@ -8,7 +33,8 @@ export var decay = 0.8
 export var max_offset = Vector2(100, 75)
 # maksymalny obrót w radianach (używać oszczędnie).
 export var max_roll = 0.1
-# pzypisanie węzeła, za którym podąża ta kamera.
+# pzypisanie węzeła, za którym podąża ta kamera;
+# można wybrać z poziomu edytora - inspektor obiektów
 export (NodePath) var target
 
 var my_target
@@ -19,21 +45,23 @@ var trauma_power = 2 # wykładnik potęgi obliczającej uraz (wstrząs) - użyj 
 var follow_target = true
 
 
-# rozwiązanie wykorzystujące referencję
-# wywołanie:
-# $Camera.setTarget($Wanderer)
-
-
 func _ready():
 	randomize()
-
+	
+	
 func add_trauma(amount):
 	trauma = min(trauma + amount, 1.0)
-
-
+	
+	
 func _physics_process(delta):
+	# Camera - tagert - from Editor
 	update_node_path(delta)
-	#update_reference(delta)
+	
+	# Camera - tagert - in code
+	# update_reference(delta)
+	#
+	# optymalizacja procesu - jedna z metod aktualizacji
+	# funkcjonalności kamery
 	pass
 	
 	

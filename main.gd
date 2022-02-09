@@ -19,6 +19,7 @@ func _ready():
 	$DefensiveTowerGamma.setTarget($Mech)
 	$DefensiveTowerDelta.setTarget($Mech)
 	
-	# reference solution
-	#$Camera.setTarget($Wanderer)
+	# $Camera.setTarget($Mech)
+	# $Camera.setTarget($Wanderer)
+	
 	pass
