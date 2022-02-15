@@ -98,7 +98,7 @@ scale = Vector2( -1.55453, -1.41709 )
 position = Vector2( -39.9493, 319.517 )
 
 [node name="MineTwo_1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 112.878, 464.92 )
+position = Vector2( 26.0416, 464.92 )
 
 [node name="MineTwo_2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -210.705, 888.925 )
@@ -132,7 +132,7 @@ position = Vector2( 173.543, 1377.86 )
 position = Vector2( 495.243, 1341.24 )
 
 [node name="Elixir_01" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1.25384, 167.968 )
+position = Vector2( -45.9399, 213.274 )
 
 [node name="Elixir_02" parent="." instance=ExtResource( 7 )]
 position = Vector2( -104.455, 465.536 )
@@ -229,19 +229,21 @@ position = Vector2( 586.207, 184.616 )
 Control = 1
 
 [node name="Mech" parent="." instance=ExtResource( 13 )]
-position = Vector2( 216.951, 409.763 )
+position = Vector2( 249.043, 355.018 )
 rotation = -0.844703
 
 [node name="DefensiveTowerAlpha" parent="." instance=ExtResource( 14 )]
-position = Vector2( 112.433, 125.719 )
-rotation = 2.18776
-
-[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 15 )]
-position = Vector2( 425.147, 106.842 )
-rotation = -2.17853
+position = Vector2( 25.5652, 132.721 )
+rotation = -3.86769
 
 [node name="DefensiveTowerBeta" parent="." instance=ExtResource( 16 )]
-position = Vector2( 341.778, 612.841 )
+position = Vector2( 136.942, 76.0886 )
+rotation = 2.54563
+
+[node name="DefensiveTowerDelta" parent="." instance=ExtResource( 15 )]
+position = Vector2( 321.942, 62.8744 )
+rotation = 3.49441
 
 [node name="DefensiveTowerGamma" parent="." instance=ExtResource( 17 )]
-position = Vector2( 613, 602.246 )
+position = Vector2( 584.338, 447.975 )
+rotation = -0.878253

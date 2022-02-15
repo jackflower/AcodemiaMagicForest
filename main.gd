@@ -16,8 +16,9 @@ func _ready():
 	
 	$DefensiveTowerAlpha.setTarget($Mech)
 	$DefensiveTowerBeta.setTarget($Mech)
-	$DefensiveTowerGamma.setTarget($Mech)
 	$DefensiveTowerDelta.setTarget($Mech)
+	$DefensiveTowerGamma.setTarget($Mech)
+	
 	
 	# $Camera.setTarget($Mech)
 	# $Camera.setTarget($Wanderer)

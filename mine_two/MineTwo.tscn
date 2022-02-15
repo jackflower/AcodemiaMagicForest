@@ -5,9 +5,7 @@
 [ext_resource path="res://mine_two/mine_two_head.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
-
 length = 2.0
-loop = false
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite_head:modulate")
@@ -59,51 +57,23 @@ tracks/3/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
 [node name="MineTwo" type="Area2D"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 script = ExtResource( 1 )
-animation_speed_min = 1
-animation_speed_max = 4
-explosion_damage_min = 10
-explosion_damage_max = 50
 
-[node name="Sprite_body" type="Sprite" parent="." index="0"]
-
+[node name="Sprite_body" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="Sprite_head" type="Sprite" parent="." index="1"]
-
+[node name="Sprite_head" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/flap_animation = SubResource( 1 )
-blend_times = [  ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_Mine_body_entered"]
-
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-
-
